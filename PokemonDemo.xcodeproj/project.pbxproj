@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1A2074092FEBF8B100350666 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2074082FEBF8B100350666 /* Apollo */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1A2073F82FEBECA500350666 /* PokemonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2074092FEBF8B100350666 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = PokemonDemo;
 			packageProductDependencies = (
+				1A2074082FEBF8B100350666 /* Apollo */,
 			);
 			productName = PokemonDemo;
 			productReference = 1A2073F82FEBECA500350666 /* PokemonDemo.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 1A2073EF2FEBECA500350666;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1A2074072FEBF8B100350666 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1A2073F92FEBECA500350666 /* Products */;
 			projectDirPath = "";
@@ -332,6 +341,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A2074072FEBF8B100350666 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A2074082FEBF8B100350666 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A2074072FEBF8B100350666 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A2073F02FEBECA500350666 /* Project object */;
 }
