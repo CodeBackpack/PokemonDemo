@@ -19,17 +19,33 @@ import SwiftUI
 
  */
 struct ContentView: View {
+    @State private var splashActive: Bool = false
+
+    // Wire simple dependencies here. In a real app use DI container.
+    private var repository = PokemonRepository()
+    private var useCase: SearchSpeciesUseCase
+
+    init() {
+        self.useCase = SearchSpeciesUseCase(repository: repository)
+    }
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            NavigationStack {
+                HomeView(viewModel: HomeViewModel(useCase: useCase))
+            }
+            
+            if !splashActive {
+                SplashView(isActive: $splashActive)
+                    .transition(.opacity)
+                    .zIndex(1)
+            }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

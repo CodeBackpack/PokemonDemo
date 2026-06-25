@@ -1,0 +1,29 @@
+{
+    "schemaNamespace" : "PokemonAPI",
+    "input" : {
+        "operationSearchPaths" : [
+            "**/*.graphql"
+        ],
+        "schemaSearchPaths" : [
+            "**/*.graphqls"
+        ]
+    },
+    "output" : {
+        "testMocks" : {
+            "none" : {
+            }
+        },
+        "schemaTypes" : {
+            "path" : "./PokemonAPI",
+            "moduleType" : {
+                "embeddedInTarget" : {
+                    "name" : "PokemonDemo"
+                }
+            }
+        },
+        "operations" : {
+            "inSchemaModule" : {
+            }
+        }
+    }
+}
